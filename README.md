@@ -6,14 +6,14 @@ Mia Libreria è un'applicazione web moderna e user-friendly per la gestione di b
 
 ## Indice dei Contenuti
 
-- [Mia Libreria 📚](#mialibreria-)
+- [Mia Libreria 📚](#mia-libreria-)
   - [Indice dei Contenuti](#indice-dei-contenuti)
   - [Tecnologie Utilizzate 🛠️](#tecnologie-utilizzate-️)
   - [Funzionalità ✅](#funzionalità-)
   - [Configurazione - Impostazione delle Chiavi API 🛠️](#configurazione---impostazione-delle-chiavi-api-)
   - [Primi Passi 🚀](#primi-passi-)
 
-## Tecnologie Utilizzate 🛠️
+## [Tecnologie Utilizzate 🛠️](#tecnologie-utilizzate-️)
 
 - [Vite](https://vitejs.dev/) - Strumento di costruzione rapido per React.js.
 - [React.js](https://reactjs.org/) - Libreria JavaScript per la costruzione di interfacce utente.
@@ -29,7 +29,7 @@ Mia Libreria è un'applicazione web moderna e user-friendly per la gestione di b
 
 ---
 
-## Funzionalità ✅
+## [Funzionalità ✅](#funzionalità-)
 
 - [x] Un'animazione di caricamento esteticamente piacevole e ottimizzata.
 - [x] Registrazione e login degli utenti, usando un'autenticazione adeguata e gestione delle sessioni (Accesso con i social media, verifica dell'email e del numero di telefono ricevono punti extra).
@@ -39,11 +39,13 @@ Mia Libreria è un'applicazione web moderna e user-friendly per la gestione di b
 - [x] Un modo esclusivo di indicare la disponibilità dei libri e il numero di copie disponibili, insieme ai campi sopra menzionati.
 - [x] Gli utenti possono filtrare e ordinare l'elenco dei libri in base a Titolo, Autore, Argomento e Data di pubblicazione.
 - [x] Mostra il conteggio dei libri dopo ogni risultato di ricerca e dopo ogni filtraggio.
-- [x] Implementa una funzionalità di carrello, aggiungendo libri al carrello, l'utente sarà in grado di effettuare il checkout e noleggiarli. Questo dovrebbe riflettersi nella disponibilità e nel numero di copie dei campi.
+- [x] Implementa una funzionalità di carrello, aggiungendo libri al carrello, l'utente sarà in grado di effettuare il checkout e noleg
+
+giarli. Questo dovrebbe riflettersi nella disponibilità e nel numero di copie dei campi.
 
 ---
 
-## Configurazione - Impostazione delle Chiavi API 🛠️
+## [Configurazione - Impostazione delle Chiavi API 🛠️](#configurazione---impostazione-delle-chiavi-api-)
 
 Per utilizzare alcune funzionalità del progetto Mia Libreria, sarà necessario configurare le seguenti chiavi API:
 
@@ -90,29 +92,31 @@ Ora, hai configurato con successo le chiavi API richieste per il progetto Mia Li
 
 ---
 
-## Primi Passi 🚀
+## [Primi Passi 🚀](#primi-passi-)
 
 Segui questi passi per configurare, eseguire e distribuire Mia Libreria su Vercel:
 
-Clona il repository:
+1. Clona il repository:
 
 ```bash
 git clone https://github.com/suryanshsingh2001/MiaLibreria.git
 cd client
 ```
 
-2. Installa le Dipendenze nella Directory client
+2. Installa le Dipendenze nella Directory `client`
 
 ```
 npm install
 ```
 
-3. Configura le variabili d'ambiente: Crea un file .env e fornisce le necessarie chiavi API e credenziali Auth0.
+3. Configura le variabili d'ambiente: Crea un file `.env` e fornisce le necessarie chiavi API e credenziali Auth0.
 
-```env
+```
 VITE_REACT_APP_GOOGLE_API_KEY=LA_TUA_CHIAVE_API_GOOGLEBOOK
+
 VITE_REACT_APP_AUTH0_DOMAIN=IL_TUO_DOMINIO_AUTH0
 VITE_REACT_APP_AUTH0_CLIENT_ID=IL_TUO_ID_CLIENTE_AUTH0
+
 ```
 
 4. Avvia il server di sviluppo:

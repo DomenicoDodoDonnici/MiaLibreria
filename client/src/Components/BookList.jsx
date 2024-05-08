@@ -80,12 +80,15 @@ const BookList = ({ searchQuery }) => {
           addedToCart: true,
           availableCopies: updatedCopies,
         };
-        toast.success(`"${updatedBook.title}" è stato aggiunto al tuo carrello.`, {
-          position: toast.POSITION.TOP_CENTER, // Imposta la posizione del toast
-          autoClose: 3000, // Chiudi il toast dopo 3 secondi (aggiustabile come necessario)
-          hideProgressBar: true, // Nascondi la barra di avanzamento
-          closeButton: false, // Non mostrare un pulsante di chiusura
-        });
+        toast.success(
+          `"${updatedBook.title}" è stato aggiunto al tuo carrello.`,
+          {
+            position: toast.POSITION.TOP_CENTER, // Imposta la posizione del toast
+            autoClose: 3000, // Chiudi il toast dopo 3 secondi (aggiustabile come necessario)
+            hideProgressBar: true, // Nascondi la barra di avanzamento
+            closeButton: false, // Non mostrare un pulsante di chiusura
+          }
+        );
         return updatedBook;
       }
       return book;
@@ -93,9 +96,7 @@ const BookList = ({ searchQuery }) => {
     setBooks(updatedBooks);
   };
 
-  const handle
-
-ResultsChange = (event) => {
+  const handleResultsChange = (event) => {
     setSelectedResults(event.target.value);
   };
 
@@ -105,7 +106,9 @@ ResultsChange = (event) => {
         Esplora la nostra collezione
       </h1>
       <p className="text-lg text-gray-600 mb-4">
-        Scopri una vasta varietà di libri nella nostra collezione. Che tu stia cercando narrativa, saggistica o un genere specifico, abbiamo qualcosa per ogni appassionato di libri.
+        Scopri una vasta varietà di libri nella nostra collezione. Che tu stia
+        cercando narrativa, saggistica o un genere specifico, abbiamo qualcosa
+        per ogni appassionato di libri.
       </p>
 
       <div className="mb-4">
@@ -138,14 +141,16 @@ ResultsChange = (event) => {
               </h2>
               {book.isAvailable ? (
                 <p className="text-green-600 font-semibold mb-2">
-                  Disponibile - 
+                  Disponibile -{" "}
                   <span className="font-semibold">
-                    {book.availableCopies} 
-                    {book.availableCopies === 1 ? "copia" : "copie"}
+                    {book.availableCopies}
+                    {book.availableCopies === 1 ? " copia" : " copie"}
                   </span>
                 </p>
               ) : (
-                <p className="text-red-600 font-semibold mb-2">Non Disponibile</p>
+                <p className="text-red-600 font-semibold mb-2">
+                  Non Disponibile
+                </p>
               )}
               <img
                 src={book.image}
@@ -155,7 +160,9 @@ ResultsChange = (event) => {
               <div className="text-sm text-gray-600">
                 <p className="mb-1">Autore: {book.author || "Sconosciuto"}</p>
                 <p className="mb-1">Genere: {book.subject || "Sconosciuto"}</p>
-                <p className="mb-1">Pubblicato: {book.published || "Sconosciuto"}</p>
+                <p className="mb-1">
+                  Pubblicato: {book.published || "Sconosciuto"}
+                </p>
               </div>
               <div className="flex justify-end">
                 {book.addedToCart ? (
