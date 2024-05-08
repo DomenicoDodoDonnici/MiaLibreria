@@ -10,7 +10,7 @@ const Search = ({ onSearch, onFilterChange, onSortChange }) => {
   const filters = ["title", "author", "subject", "published"];
   const sortOptions = ["relevance", "newest", "oldest"];
 
-  // usato per verificare se un toast è già visualizzato e prevenire toast multipli
+  // Usato per verificare se un toast è già visualizzato e prevenire toast multipli
   const toastId = React.useRef(null);
 
   const notifyerror = (msg) => {

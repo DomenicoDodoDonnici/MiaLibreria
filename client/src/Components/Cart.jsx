@@ -1,7 +1,6 @@
-import React from "react";
 import { useCart } from "../utils/CartContext";
 import { toast } from "react-toastify"; // Importa il modulo toast
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cartItems, removeFromCart, clearCart } = useCart();
@@ -25,7 +24,21 @@ const Cart = () => {
       );
     } else {
       // Il carrello non è vuoto
-      clearCart(); // Svuota il carrello
+
+      // Ottieni la data e l'ora attuali
+      const now = new Date();
+      const formattedDate = now.toLocaleDateString();
+      const formattedTime = now.toLocaleTimeString();
+
+      // Log dettagliato dei libri noleggiati
+      console.log(
+        `Libri noleggiati il ${formattedDate} alle ${formattedTime}:`,
+        JSON.stringify(cartItems, null, 2)
+      );
+
+      // Pulisci il carrello e mostra il messaggio di successo
+      clearCart();
+
       toast.success(
         "Evviva! 🎉 Hai noleggiato con successo gli articoli selezionati. Goditi la tua avventura di lettura!",
         {
@@ -51,7 +64,7 @@ const Cart = () => {
               </span>
             </h1>
             <p className="text-gray-500 mt-2">
-              È un po' solitario qui dentro! Perché non inizi ad aggiungere
+              È un po&apos; solitario qui dentro! Perché non inizi ad aggiungere
               alcuni libri fantastici al tuo carrello? Buoni acquisti!
             </p>
 
@@ -97,7 +110,6 @@ const Cart = () => {
               <button
                 className="relative w-56 inline-flex items-center justify-center px-10 py-4 overflow-hidden text-white bg-[#46331f] rounded-lg group"
                 onClick={clearCart}
-                className="relative w-56 inline-flex items-center justify-center px-10 py-4  sm:px-14 overflow-hidden text-white bg-[#46331f] rounded-lg group"
                 style={{ whiteSpace: "nowrap" }}
               >
                 <span className="absolute w-10 h-0 transition-all duration-500 ease-out bg-black rounded-full group-hover:w-56 group-hover:h-56"></span>
